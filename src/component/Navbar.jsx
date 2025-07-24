@@ -12,7 +12,7 @@ import { AiOutlineBell } from "react-icons/ai";
 function Navbar() {
   return (
     // main div
-    <div className='flex justify-between px-6 py-2'> 
+    <div className='flex justify-between px-6 py-2 fixed bg-white top-0 w-[100%]'> 
 
         <div className="flex items-center space-x-4 ">{/* yt logo and hamburger*/} 
         <GiHamburgerMenu className="text-xl cursor-pointer" />
