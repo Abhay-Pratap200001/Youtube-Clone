@@ -43,7 +43,7 @@ function Navbar() {
         <div className="flex space-x-5 items-center ">
         <RiVideoAddLine className="text-2xl"/>
         <AiOutlineBell className="text-2xl"/>
-        <img className='w-20' src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" alt="profile" size="32" round={true}/>        
+        {/* <img className='w-20' src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg" alt="profile" size="32" round={true}/>         */}
       </div>
     </div>
   )

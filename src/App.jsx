@@ -1,11 +1,14 @@
 import { useState } from 'react'
 import Navbar from './component/Navbar'
 import Sidebar from './component/Sidebar'
+import { useAuth } from './context/AuthProvider'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const {loading, data}=useAuth() //using auth data 
+  console.log(loading)
+  console.log(data);
+  
   return (
     <>
     <Navbar/>
