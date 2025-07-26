@@ -193,7 +193,7 @@ const sidebarItems5 = [
 
 
   return (
-    <div className="p-6 w-[15%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden mt-23"> {/* main div */}
+    <div className="p-6 w-[25%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden "> {/* main div */}
       <div className="space-y-3 items-center">  {/* home */}
         {sidebarItems.map((item) => {
           return (

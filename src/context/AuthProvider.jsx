@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { fetchData } from "../utils/rapidapi";
 
-export const AuthContext = createContext();
+export const AuthContext = createContext(); //This context will store and provide data (like loading, data
 
 export default function AuthProvider({ children }){//giving child as a parameter so we can use conext in all component 
   const [loading, setLoading] = useState(false);// for loading page
@@ -9,14 +9,15 @@ export default function AuthProvider({ children }){//giving child as a parameter
   const [value, setValue] = useState("New");
 
   useEffect(() => {
-    fetchAlldata(value);//value of data was new
-  }, [value]);
+    fetchAlldata(value);//intial value is new
+  }, [value]);// run when value change
 
   const fetchAlldata = (query) => {
     setLoading(true);
-    fetchData(`search/?q=${query}`).then(({contents}) => {
-      console.log(contents);
-      setData(contents);// destructuring data and keepig data from contents to set data 
+    fetchData(`search/?q=${query}`)//create a dynamic search URL 
+    .then(({contents}) => {// destructuring data and extract data from contents to set data 
+      // console.log(contents);  
+      setData(contents);
       setLoading(false);
     });
   };
