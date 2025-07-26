@@ -16,8 +16,8 @@ function Video({ video }) {
             <img
               className="h-full w-full"
               src={video?.thumbnails[0]?.url}
-              alt=""
-            />
+              alt=""/>
+
             {/* send vide duration a prop */}
             {video?.lengthSeconds && <Time time={video?.lengthSeconds} />}
           </div>
@@ -27,8 +27,7 @@ function Video({ video }) {
                 <img
                   className="h-full w-full rounded-full overflow-hidden"
                   src={video?.author?.avatar[0].url}
-                  alt=""
-                />
+                  alt=""/>
               </div>
             </div>
 
