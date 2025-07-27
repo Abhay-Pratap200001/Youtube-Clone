@@ -12,15 +12,17 @@ export default function AuthProvider({ children }){//giving child as a parameter
     fetchAlldata(value);//intial value is new
   }, [value]);// run when value change
 
+
   const fetchAlldata = (query) => {
     setLoading(true);
-    fetchData(`search/?q=${query}`)//create a dynamic search URL 
+    fetchData(`search/?q=${query}`)//create a dynamic search URL givw what you search
     .then(({contents}) => {// destructuring data and extract data from contents to set data 
       // console.log(contents);  
       setData(contents);
       setLoading(false);
     });
   };
+  
   return (
     // sending data and other values loading to all component globally 
     <AuthContext.Provider value={{ loading, data, value, setValue }}>

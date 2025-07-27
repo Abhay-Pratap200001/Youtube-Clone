@@ -23,7 +23,7 @@ function Listitems() {
   ];
 
   return (
-    <div className="flex overflow-x-scroll scrollbar-hidden px-4 top-0 sticky ">
+    <div className="flex overflow-x-scroll scrollbar-hidden px-4 ">
       <div className="flex space-x-4 flex-nowrap">
         {categories.map((category) => {
           return (

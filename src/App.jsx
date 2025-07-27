@@ -1,8 +1,8 @@
-import {Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 import Home from "./components/Home";
 import Search from "./components/Search";
-import PlayingVideo from "./components/PlayingVideo";
-import { useAuth } from "./context/AuthProvider";
+import { PlayingVideo } from "./components/PlayingVideo";
+import { useAuth } from "./context/AuthProvider"; // Fixed path
 import Navbar from './components/Navbar';
 import Loading from './components/Loading';
 
@@ -11,15 +11,15 @@ function App() {
 
   return (
     <>
-    {loading && <Loading/>}
-    <Navbar/>
-    <Routes>
-      <Route path="/" exact element={<Home />} />
+      {loading && <Loading />}
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/search/:searchQuery" element={<Search />} />
         <Route path="/video/:id" element={<PlayingVideo />} />
-    </Routes>
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

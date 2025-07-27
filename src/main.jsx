@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
   //providing context api to globoally
+  
   <BrowserRouter>
   <AuthProvider> 
     <App />
