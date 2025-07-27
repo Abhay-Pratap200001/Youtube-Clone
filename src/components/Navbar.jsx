@@ -21,7 +21,7 @@ function Navbar() {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-white z-50 shadow-md h-18">
+    <div className="fixed top-0 left-0 w-full bg-gray-200 shadow-md h-18">
 
       {/* =============== TOP NAVBAR =============== */}
       <div className="flex justify-between items-center px-3 sm:px-6 py-2 h-14 sm:h-16">
@@ -36,7 +36,7 @@ function Navbar() {
 
         {/* Search Bar - Desktop */}
         <div className="hidden md:flex items-center w-[40%] max-w-md">
-          <div className="w-full px-4 py-2 border border-gray-400 rounded-l-full">
+          <div className="w-full px-4 py-2 border h-10 border-gray-400 rounded-l-full">
             <input
               type="text"
               placeholder="Search"
@@ -47,7 +47,7 @@ function Navbar() {
           </div>
 
           <button
-            className="px-4 py-2 border border-gray-400 bg-slate-100 rounded-r-full hover:bg-gray-200"
+            className="px-4 py-2 border h-10 border-gray-400 bg-slate-100 rounded-r-full hover:bg-gray-200"
             onClick={() => searchQueryHandler("searchButton")}>
             <CiSearch size={22} />
           </button>
